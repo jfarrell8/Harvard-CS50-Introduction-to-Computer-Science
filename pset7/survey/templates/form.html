@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post">
+
+        <div class="form-group row">
+            <label for="Name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" name="name" placeholder="Name" autofocus>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">Meal Genre</div>
+            <div class="col-sm-2">
+                <select class="custom-select" name="meal genre">
+                    <option disabled selected value="">Meal Genre</option>
+                    <option value="Mexican">Mexican</option>
+                    <option value="Middle Eastern">Middle Eastern</option>
+                    <option value="French">French</option>
+                    <option value="American">American</option>
+                </select>
+            </div>
+        </div>
+
+        <fieldset class="form-group">
+            <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Meal Type</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="meal type" id="radio1" value="Breakfast" checked>
+                        <label class="form-check-label" for="Breakfast">
+                            Breakfast
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="meal type" id="radio2" value="Lunch">
+                        <label class="form-check-label" for="Lunch">
+                            Lunch
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="meal type" id="radio3" value="Dinner">
+                        <label class="form-check-label" for="Dinner">
+                            Dinner
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <script>
+
+        document.querySelector('form').onsubmit = function() {
+            if (!document.querySelector('input').value) {
+                alert("You must type in your name");
+                return false;
+            }
+            else if (!document.querySelector('select').value) {
+                alert("You must select a meal genre");
+                return false;
+            }
+            return true;
+        };
+
+    </script>
+
+{% endblock %}
