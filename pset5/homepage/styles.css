@@ -1,0 +1,21 @@
+.center {
+    text-align: center;
+    color: red;
+}
+
+main {
+    font-style: italic;
+}
+
+#selection {
+    text-decoration: underline;
+}
+
+a:hover {
+    background-color: yellow;
+}
+
+p::first-letter {
+    font-size: 125%;
+    color: #B123ED;
+}
