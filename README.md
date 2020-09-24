@@ -11,5 +11,6 @@ I audited this course through Harvard in September 2019 to gauge my interest aro
 * Week 5: Data Structures
 * Week 6: Python
 * Week 7: SQL
+* Week 8: HTML/CSS
 
 In this repository, each folder corresponds to the problem set work I completed for each week.
